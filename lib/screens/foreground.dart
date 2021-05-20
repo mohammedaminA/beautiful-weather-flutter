@@ -64,6 +64,23 @@ class ForeGround extends StatelessWidget {
                 ),
                   suffixIcon: Icon(Icons.search, color: Colors.white,)
                 ),
+              ),
+              SizedBox(height: 150,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('My Locations', style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w600
+                  ),),
+                  OutlinedButton(
+                    child: Icon(Icons.more_horiz),
+                    style: OutlinedButton.styleFrom(
+                      primary: Colors.white,
+                      side: BorderSide(width: 1, color: Colors.white)
+                    ),
+                  )
+                ],
               )
             ],
           ),
