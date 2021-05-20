@@ -13,6 +13,15 @@ class ForeGround extends StatelessWidget {
           icon: Icon(Icons.menu),
           onPressed: () {},
         ),
+        actions: [
+          IconButton(
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage('https://i.ibb.co/Z1fYsws/profile-image.jpg'),
+              backgroundColor: Colors.black54,
+            ),
+            onPressed: () {},
+          )
+        ],
       ),
     );
   }
