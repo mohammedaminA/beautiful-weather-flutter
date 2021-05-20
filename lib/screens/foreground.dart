@@ -23,6 +23,7 @@ class ForeGround extends StatelessWidget {
           )
         ],
       ),
+      body:  ,
     );
   }
 }
