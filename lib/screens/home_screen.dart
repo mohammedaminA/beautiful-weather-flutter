@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather/screens/foreground.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -17,10 +18,14 @@ class HomeScreen extends StatelessWidget {
         Positioned(
           bottom: 0,
           child: Container(
-            height: height / 2.4
+            height: height / 2.4,
+            color: Color(0xFF2D2C35),
+            width: width,
           ),
-        )
+        ),
+        ForeGround()
       ],
     );
   }
 }
+
