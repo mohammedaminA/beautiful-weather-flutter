@@ -56,7 +56,10 @@ class ForeGround extends StatelessWidget {
                 decoration: InputDecoration(
                   border: border,
                   enabledBorder: border,
-                  focusedBorder: border
+                  focusedBorder: border,
+                  hintText: 'Search City', hintStyle: TextStyle(
+                  color: Colors.white,
+                )
                 ),
               )
             ],
