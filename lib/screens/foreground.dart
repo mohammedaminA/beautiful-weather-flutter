@@ -59,6 +59,8 @@ class ForeGround extends StatelessWidget {
                   focusedBorder: border,
                   hintText: 'Search City', hintStyle: TextStyle(
                   color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600
                 )
                 ),
               )
