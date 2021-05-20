@@ -9,7 +9,7 @@ class ForeGround extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.white),
-        leading: Icon(Icons.menu),
+        leading: Icon(Icons.menu),s
       ),
     );
   }
