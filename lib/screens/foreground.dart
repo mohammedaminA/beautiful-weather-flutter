@@ -4,6 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 class ForeGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var border = OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+
+                  );
     return Scaffold(
       backgroundColor: Colors.black54,
       appBar: AppBar(
@@ -33,7 +38,7 @@ class ForeGround extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 50,
+                height: 40,
               ),
               Text(
                 'Hello Mat!',
@@ -47,7 +52,13 @@ class ForeGround extends StatelessWidget {
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
               ),
               SizedBox(height: 35,),
-              TextField()
+              TextField(
+                decoration: InputDecoration(
+                  border: border,
+                  enabledBorder: border,
+                  focusedBorder: border
+                ),
+              )
             ],
           ),
         ),
