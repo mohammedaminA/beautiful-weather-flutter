@@ -23,7 +23,9 @@ class ForeGround extends StatelessWidget {
           )
         ],
       ),
-      body:  ,
+      body: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20.0),
+      ) ,
     );
   }
 }
