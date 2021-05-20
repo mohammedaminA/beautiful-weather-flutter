@@ -65,7 +65,7 @@ class ForeGround extends StatelessWidget {
                   suffixIcon: Icon(Icons.search, color: Colors.white,)
                 ),
               ),
-              SizedBox(height: 150,),
+              SizedBox(height: 110,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -74,10 +74,11 @@ class ForeGround extends StatelessWidget {
                     fontWeight: FontWeight.w600
                   ),),
                   OutlinedButton(
-                    child: Icon(Icons.more_horiz),
+                    child: Icon(Icons.more_horiz, color: Colors.white,),
                     style: OutlinedButton.styleFrom(
                       primary: Colors.white,
-                      side: BorderSide(width: 1, color: Colors.white)
+                      side: BorderSide(width: 1, color: Colors.white),
+                      shape: CircleBorder()
                     ),
                   )
                 ],
