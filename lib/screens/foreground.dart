@@ -61,7 +61,8 @@ class ForeGround extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 12,
                   fontWeight: FontWeight.w600
-                )
+                ),
+                  suffixIcon: Icon(Icons.search, color: Colors.white,)
                 ),
               )
             ],
