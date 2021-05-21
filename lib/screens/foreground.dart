@@ -43,21 +43,21 @@ class ForeGround extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 60,
+                height: 40,
               ),
               Text(
                 'Hello ${user.displayName.substring(0, user.displayName.indexOf(' '))}!',
                 style: TextStyle(fontSize: 30),
               ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               Text(
                 'Check the weather for every city!',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
               ),
               SizedBox(
-                height: 55,
+                height: 35,
               ),
               TextField(
                 decoration: InputDecoration(
@@ -75,7 +75,7 @@ class ForeGround extends StatelessWidget {
                     )),
               ),
               SizedBox(
-                height: 130,
+                height: 110,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +98,7 @@ class ForeGround extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 50,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
