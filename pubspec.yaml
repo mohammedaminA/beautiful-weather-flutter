@@ -35,8 +35,9 @@ dependencies:
   sign_button: ^2.0.0
   google_sign_in: ^5.0.3
   provider: ^5.0.0
-  http: ^0.13.3
   geolocator: ^3.0.1
+  http: ^0.13.0
+
 
 
 
