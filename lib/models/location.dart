@@ -7,3 +7,4 @@ class Location {
 
   Location({this.text, this.time, this.temperature, this.weather, this.imgUrl});
 }
+

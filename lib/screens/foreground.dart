@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:weather/models/location_data.dart';;
 
 class ForeGround extends StatelessWidget {
   @override
@@ -80,9 +81,11 @@ class ForeGround extends StatelessWidget {
                       side: BorderSide(width: 1, color: Colors.white),
                       shape: CircleBorder()
                     ),
+                    onPressed: () {} ,
                   )
                 ],
-              )
+              ),
+
             ],
           ),
         ),
