@@ -3,6 +3,8 @@ import 'package:weather/screens/foreground.dart';
 
 
 class HomeScreen extends StatelessWidget {
+   final snapshotData;
+   HomeScreen(this.snapshotData);
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
