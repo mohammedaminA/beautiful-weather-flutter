@@ -1,16 +1,16 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:weather/models/location_data.dart';;
+import 'package:weather/models/location_data.dart';
 
 class ForeGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     var border = OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(30)),
-
-                  );
+      borderSide: BorderSide(color: Colors.white),
+      borderRadius: BorderRadius.all(Radius.circular(30)),
+    );
     return Scaffold(
       backgroundColor: Colors.black54,
       appBar: AppBar(
@@ -53,51 +53,78 @@ class ForeGround extends StatelessWidget {
                 'Check the weather for every city!',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
               ),
-              SizedBox(height: 35,),
+              SizedBox(
+                height: 35,
+              ),
               TextField(
                 decoration: InputDecoration(
-                  border: border,
-                  enabledBorder: border,
-                  focusedBorder: border,
-                  hintText: 'Search City', hintStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600
-                ),
-                  suffixIcon: Icon(Icons.search, color: Colors.white,)
-                ),
+                    border: border,
+                    enabledBorder: border,
+                    focusedBorder: border,
+                    hintText: 'Search City',
+                    hintStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600),
+                    suffixIcon: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    )),
               ),
-              SizedBox(height: 110,),
+              SizedBox(
+                height: 110,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('My Locations', style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600
-                  ),),
+                  Text(
+                    'My Locations',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+                  ),
                   OutlinedButton(
-                    child: Icon(Icons.more_horiz, color: Colors.white,),
-                    style: OutlinedButton.styleFrom(
-                      primary: Colors.white,
-                      side: BorderSide(width: 1, color: Colors.white),
-                      shape: CircleBorder()
+                    child: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
                     ),
-                    onPressed: () {} ,
+                    style: OutlinedButton.styleFrom(
+                        primary: Colors.white,
+                        side: BorderSide(width: 1, color: Colors.white),
+                        shape: CircleBorder()),
+                    onPressed: () {},
                   )
                 ],
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   for (var location in locations)
-                      ClipRRect(borderRadius: BorderRadius.circular(8),
-                        child: Stack(
-                          children: [
-                            Image.network(location.imgUrl, height:,)
-                          ],
-                        ),
-
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Stack(
+                        children: [
+                          ColorFiltered(
+                            colorFilter: ColorFilter.mode(
+                                Colors.black45, BlendMode.darken),
+                            child: Image.network(
+                              location.imgUrl,
+                              height: height * 0.35,
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Text(location.text, style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 19
+                              ),),
+                            ],
+                          )
+                        ],
+                      ),
+                    )
                 ],
               )
             ],
