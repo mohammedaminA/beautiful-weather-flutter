@@ -1,4 +1,4 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather/models/location_data.dart';
@@ -104,6 +104,7 @@ class ForeGround extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Stack(
+                        alignment: AlignmentDirectional.center,
                         children: [
                           ColorFiltered(
                             colorFilter: ColorFilter.mode(
@@ -115,11 +116,28 @@ class ForeGround extends StatelessWidget {
                           ),
                           Column(
                             children: [
-                              Text(location.text, style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 19
-                              ),),
+                              Text(
+                                location.text,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 19),
+                              ),
+                              Text(location.time),
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Text(
+                                location.temperature.toString() + '°',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                              Text(location.weather)
                             ],
                           )
                         ],
