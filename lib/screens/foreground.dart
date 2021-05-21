@@ -5,6 +5,7 @@ import 'package:weather/models/location_data.dart';;
 class ForeGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     var border = OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -85,7 +86,20 @@ class ForeGround extends StatelessWidget {
                   )
                 ],
               ),
+              SizedBox(height: 30,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  for (var location in locations)
+                      ClipRRect(borderRadius: BorderRadius.circular(8),
+                        child: Stack(
+                          children: [
+                            Image.network(location.imgUrl, height:,)
+                          ],
+                        ),
 
+                ],
+              )
             ],
           ),
         ),
