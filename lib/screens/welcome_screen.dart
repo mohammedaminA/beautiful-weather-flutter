@@ -4,7 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sign_button/constants.dart';
 import 'package:sign_button/sign_button.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:weather/models/provider.dart';
 import 'home_screen.dart';
+import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -56,10 +58,8 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   SignInButton(
                     buttonType: ButtonType.google,
-                    onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return HomeScreen();
-                        }));
+                    onPressed: ()  {
+                      GoogleSignInProvider provider = Provider.of<GoogleSignInProvider>(context, listen: false);
                     },
                     buttonSize: ButtonSize.large,
                   ),
