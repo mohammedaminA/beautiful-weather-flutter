@@ -44,7 +44,9 @@ class SignUp extends StatelessWidget {
                   ),
                   SignInButton(
                     buttonType: ButtonType.mail,
-                    onPressed: () {},
+                    onPressed: () {
+
+                    },
                     buttonSize: ButtonSize.large,
                   ),
                   SizedBox(
