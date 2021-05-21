@@ -52,7 +52,7 @@ class ForeGround extends StatelessWidget {
               SizedBox(
                 height: 5,
               ),
-              Text(
+              Text(a
                 'Check the weather for every city!',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
               ),
