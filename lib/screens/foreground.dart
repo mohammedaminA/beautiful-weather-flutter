@@ -2,10 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather/models/location_data.dart';
+import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class ForeGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
     final height = MediaQuery.of(context).size.height;
     var border = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.white),
@@ -25,7 +28,7 @@ class ForeGround extends StatelessWidget {
           IconButton(
             icon: CircleAvatar(
               backgroundImage:
-                  NetworkImage('https://i.ibb.co/Z1fYsws/profile-image.jpg'),
+                  NetworkImage(user.photoURL),
               backgroundColor: Colors.black54,
             ),
             onPressed: () {},
@@ -40,21 +43,21 @@ class ForeGround extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 40,
+                height: 60,
               ),
               Text(
-                'Hello Mat!',
+                'Hello ${user.displayName.substring(0, user.displayName.indexOf(' '))}!',
                 style: TextStyle(fontSize: 30),
               ),
               SizedBox(
-                height: 5,
+                height: 10,
               ),
               Text(
                 'Check the weather for every city!',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
               ),
               SizedBox(
-                height: 35,
+                height: 55,
               ),
               TextField(
                 decoration: InputDecoration(
@@ -72,7 +75,7 @@ class ForeGround extends StatelessWidget {
                     )),
               ),
               SizedBox(
-                height: 110,
+                height: 130,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -95,7 +98,7 @@ class ForeGround extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 50,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
