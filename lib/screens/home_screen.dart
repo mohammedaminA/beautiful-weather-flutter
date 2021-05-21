@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather/screens/foreground.dart';
 
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

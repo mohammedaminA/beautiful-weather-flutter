@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather/screens/welcome_screen.dart';
 import 'screens/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: WelcomeScreen(),
     );
   }
 }
