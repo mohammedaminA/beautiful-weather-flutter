@@ -32,7 +32,7 @@ class ForeGround extends StatelessWidget {
               backgroundColor: Colors.black54,
             ),
             onPressed: () {},
-          )
+          )a
         ],
       ),
       body: SingleChildScrollView(
