@@ -41,7 +41,7 @@ class ForeGround extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 18.0),
           child: DefaultTextStyle(
-            style: GoogleFonts.raleway(color: Colors.white),sKK
+            style: GoogleFonts.raleway(color: Colors.white),sK
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
