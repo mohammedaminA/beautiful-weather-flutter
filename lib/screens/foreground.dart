@@ -12,7 +12,6 @@ class ForeGround extends StatelessWidget {
   Widget build(BuildContext context) {
     var weather;
     final user = FirebaseAuth.instance.currentUser;
-    final height = MediaQuery.of(context).size.height;
     var border = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.white),
       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -65,8 +64,7 @@ class ForeGround extends StatelessWidget {
                 ),
                 TextField(
                   onChanged: (value) {
-                    Future weather = WeatherModel().getCityWeather(value);
-                    print(weather);
+                    weather = WeatherModel().getCityWeather(value);
                   },
                   decoration: InputDecoration(
                       border: border,
@@ -108,54 +106,54 @@ class ForeGround extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    for (var location in weather)
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Stack(
-                          alignment: AlignmentDirectional.center,
-                          children: [
-                            ColorFiltered(
-                              colorFilter: ColorFilter.mode(
-                                  Colors.black45, BlendMode.darken),
-                              child: Image.network(
-                                location.imgUrl,
-                                height: height * 0.35,
-                              ),
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  location.text,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 19),
-                                ),
-                                Text(location.time),
-                                SizedBox(
-                                  height: 40,
-                                ),
-                                Text(
-                                  location.temperature.toString() + '°',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                Text(location.weather)
-                              ],
-                            )
-                          ],
-                        ),
-                      )
-                  ],
-                )
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     for (var location in locations)
+                //       ClipRRect(
+                //         borderRadius: BorderRadius.circular(8),
+                //         child: Stack(
+                //           alignment: AlignmentDirectional.center,
+                //           children: [
+                //             ColorFiltered(
+                //               colorFilter: ColorFilter.mode(
+                //                   Colors.black45, BlendMode.darken),
+                //               child: Image.network(
+                //                 location.imgUrl,
+                //                 height: height * 0.35,
+                //               ),
+                //             ),
+                //             Column(
+                //               children: [
+                //                 Text(
+                //                   location.text,
+                //                   style: TextStyle(
+                //                       color: Colors.white,
+                //                       fontWeight: FontWeight.w600,
+                //                       fontSize: 19),
+                //                 ),
+                //                 Text(location.time),
+                //                 SizedBox(
+                //                   height: 40,
+                //                 ),
+                //                 Text(
+                //                   location.temperature.toString() + '°',
+                //                   style: TextStyle(
+                //                       color: Colors.white,
+                //                       fontSize: 40,
+                //                       fontWeight: FontWeight.w600),
+                //                 ),
+                //                 SizedBox(
+                //                   height: 50,
+                //                 ),
+                //                 Text(location.weather)
+                //               ],
+                //             )
+                //           ],
+                //         ),
+                //       )
+                //   ],
+                // )
               ],
             ),
           ),
