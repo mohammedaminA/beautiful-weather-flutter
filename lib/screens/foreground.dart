@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:weather/models/location_data.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:weather/models/weather.dart';
+
 
 class ForeGround extends StatelessWidget {
   @override
@@ -61,6 +63,10 @@ class ForeGround extends StatelessWidget {
                   height: 35,
                 ),
                 TextField(
+                  onChanged: (value) {
+                    Future weather = WeatherModel().getCityWeather(value);
+                    print(weather);
+                  },
                   decoration: InputDecoration(
                       border: border,
                       enabledBorder: border,
@@ -104,7 +110,7 @@ class ForeGround extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    for (var location in locations)
+                    for (var location in weather)
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Stack(
