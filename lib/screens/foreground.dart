@@ -10,6 +10,7 @@ import 'package:weather/models/weather.dart';
 class ForeGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var weather;
     final user = FirebaseAuth.instance.currentUser;
     final height = MediaQuery.of(context).size.height;
     var border = OutlineInputBorder(
