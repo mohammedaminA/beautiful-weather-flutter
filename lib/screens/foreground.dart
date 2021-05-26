@@ -11,6 +11,7 @@ class ForeGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var weather;
+    final height = MediaQuery.of(context).size.height;
     final user = FirebaseAuth.instance.currentUser;
     var border = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.white),
@@ -109,7 +110,7 @@ class ForeGround extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    for (var location in locations)
+                    for (var location in weather)
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Stack(
