@@ -9,6 +9,7 @@ import 'package:weather/models/location_data.dart';
 class HomeScreen extends StatelessWidget {
    final snapshotData;
    HomeScreen(this.snapshotData);
+   
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;

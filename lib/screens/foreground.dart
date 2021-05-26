@@ -64,8 +64,9 @@ class ForeGround extends StatelessWidget {
                   height: 35,
                 ),
                 TextField(
-                  onChanged: (value) {
-                    weather = WeatherModel().getCityWeather(value);
+                  onChanged: (value) async {
+                    weather = await WeatherModel().getCityWeather(value);
+                     print(weather.data);
                   },
                   decoration: InputDecoration(
                       border: border,
